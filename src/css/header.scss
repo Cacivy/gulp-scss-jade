@@ -1,0 +1,49 @@
+@import 'constant';
+@import 'mixin';
+
+$header-height: 80px;
+$header-padding: 0 100px;
+$header-border-bottom: 2px;
+$header-li-width: 100px;
+$header-li-hover: #178BCA;
+$header-ui-width: $header-li-width*6;
+$header-logo-width: 168px;
+
+.header {
+    min-width: $header-ui-width + $header-logo-width;
+    height: $header-height;
+    border-bottom: $header-border-bottom solid $color-border;
+    padding: $header-padding;
+    img.logo {
+        height: $header-height;
+        width: $header-logo-width;
+    }
+    ul.menu {
+        width: $header-ui-width;
+        height: $header-height;
+        font-size: 16px;
+        float: right;
+
+        li {
+            width: $header-li-width;
+            height: $header-height;
+            float: left;
+            @include center-all($header-height);
+
+            &.active {
+                background-color: $header-li-hover;
+                color: #fff;
+            }
+
+            &:hover {
+                @extend .active;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $header-ui-width + $header-logo-width + 100px) {
+    .header {
+        padding: 0;
+    }
+}

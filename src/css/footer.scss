@@ -1,0 +1,75 @@
+@import 'mixin';
+
+$footer-bg-color: #6B6B6B;
+$footer-bottom-height: 40px;
+$footer-padding: 100px;
+
+.footer {
+    background-color: $footer-bg-color;
+    color: #fff;
+    padding-top: 20px;
+
+    .top {
+        padding: 0 0 10px $footer-padding;
+
+        .col {
+            width: 15%;
+            min-width: 200px;
+            margin-right: 10%;
+            display: inline-block;
+            vertical-align: top;
+
+            span {
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                border-bottom: 1px solid #fff;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                li {
+                    height: 30px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .contact {
+            width: 15%;
+            padding: 20px 0 0 20px;
+            display: inline-block;
+            border-left: 1px solid #fff;
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    .bottom {
+        height: $footer-bottom-height;
+        line-height: $footer-bottom-height;
+        margin-left: $footer-padding;
+        padding-right: 160px;
+        border-top: 1px solid #fff;
+
+        ul {
+            li {
+                margin-left: 5px;
+                float: left;
+                @include center-all($footer-bottom-height);
+
+                &::after {
+                    content: '|';
+                     margin-left: 5px;
+                }
+            }
+        }
+
+        .title {
+            float: right;
+        }
+    }
+}
