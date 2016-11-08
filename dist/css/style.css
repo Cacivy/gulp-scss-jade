@@ -20,18 +20,18 @@ a {
   .header img.logo {
     height: 80px;
     width: 168px; }
-  .header ul.menu {
+  .header ul.nav {
     width: 600px;
     height: 80px;
     font-size: 16px;
     float: right; }
-    .header ul.menu li {
+    .header ul.nav li {
       width: 100px;
       height: 80px;
       float: left;
       line-height: 80px;
       text-align: center; }
-      .header ul.menu li.active, .header ul.menu li:hover {
+      .header ul.nav li.active, .header ul.nav li:hover {
         background-color: #178BCA;
         color: #fff; }
 
